@@ -38,8 +38,8 @@ if debug:
 	for tup in tagged_tokens[:150]:
 		print (tup)
 
-tagmap = {"NN":"a noun","NNS":"a plural noun","VB":"a verb","JJ":"an adjective", "AV":"an adverb"}
-substitution_probabilities = {"NN":.15,"NNS":0.1,"VB":0.1,"JJ":0.1, "AV":0.1}
+tagmap = {"NN":"a noun","NNS":"a plural noun","VB":"a verb","JJ":"an adjective", "NNP":"a proper noun"}
+substitution_probabilities = {"NN":.15,"NNS":0.1,"VB":0.1,"JJ":0.1, "NNP":0.1}
 
 def spaced(word):
 	if word in [",", ".", "?", "!", ":"]:
