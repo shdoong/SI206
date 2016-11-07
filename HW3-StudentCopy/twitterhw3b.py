@@ -11,10 +11,7 @@ from textblob import TextBlob
 import re
 
 # Unique code from Twitter
-access_token = "2728266822-DMQVz4YHsvXHTOEtlpewGQzrGVVfnVpOcqRn9ub"
-access_token_secret = "eeY9Dpoke76c3zfxvzEBpboIT2naMSxI7sSmNDg0KYkZC"
-consumer_key = "P35WXeIUVDcRtKWOmqkfhMa9Y"
-consumer_secret = "MKvAaIhLM1tvSjaHi5JRp4clKnhFYsxsqEQ1zn05cOynHHNLIr"
+#Access tokens taken out to commit to git
 
 # Boilerplate code here
 auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
