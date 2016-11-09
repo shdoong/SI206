@@ -26,8 +26,8 @@ soup = BeautifulSoup(r.text, 'html.parser')
 str_soup = soup.encode("ascii", "ignore").decode("utf-8")
 
 
-main_img_replace = str_soup.replace("https://testbed.files.wordpress.com/2012/09/bsi_exposition_041316_192.jpg", "media/IMG_6293.jpg")
-local_img_replace = main_img_replace.replace("logo2.png", "media/logo.png")
+main_img_replace = str_soup.replace("https://testbed.files.wordpress.com/2012/09/bsi_exposition_041316_192.jpg", "media/IMG_6293.jpg") #replacing main picture with personal picture
+local_img_replace = main_img_replace.replace("logo2.png", "media/logo.png") #replacing logo pictures with photo from media file
 
 x = local_img_replace.replace("student", "AMAZING student")
 
