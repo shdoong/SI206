@@ -11,35 +11,35 @@
 # 1) Print the new text
 import nltk 
 import random
-from nltk.book import text2 
+from nltk.book import text2 #importing text2 from nltk book corpa
 
 print("START*******")
 
-nltk.download('punkt')
+#nltk.download('punkt')
 
 from nltk import word_tokenize,sent_tokenize
 
-debug = False #True
+debug = False
 
 tokens = []
-for x in text2[0:150]:
+for x in text2[:151]: #getting 150 tokens
 	tokens.append(x)
 
 print("TOKENS")
-
 print (tokens)
-print (len(tokens))
+#print (len(tokens))
 
 tagged_tokens = nltk.pos_tag(tokens) # gives us a tagged list of tuples
-print("TAGGED TOKENS")
-print(tagged_tokens)
+#print("TAGGED TOKENS")
+#print(tagged_tokens)
+
 if debug:
 	print ("First few tagged tokens are:")
-	for tup in tagged_tokens[:150]:
+	for tup in tagged_tokens[:151]:
 		print (tup)
 
 tagmap = {"NN":"a noun","NNS":"a plural noun","VB":"a verb","JJ":"an adjective", "NNP":"a proper noun"}
-substitution_probabilities = {"NN":.15,"NNS":0.1,"VB":0.1,"JJ":0.1, "NNP":0.1}
+substitution_probabilities = {"NN":.15,"NNS":0.1,"VB":0.1,"JJ":0.1, "NNP":0.1} #assigns percentages to noun, plural nouns, verbs, etc. Added NNP proper noun
 
 def spaced(word):
 	if word in [",", ".", "?", "!", ":"]:
