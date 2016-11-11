@@ -26,12 +26,9 @@ for x in text2[:151]: #getting 150 tokens
 	tokens.append(x)
 
 print("TOKENS")
-print (tokens)
-#print (len(tokens))
+print (tokens) #printing first 150 original tokens
 
 tagged_tokens = nltk.pos_tag(tokens) # gives us a tagged list of tuples
-#print("TAGGED TOKENS")
-#print(tagged_tokens)
 
 if debug:
 	print ("First few tagged tokens are:")
